@@ -1,0 +1,10 @@
+<h1>Default pipes</h1>
+<i><a href="https://angular.dev/guide/pipes" target="_blank">Source</a></i>
+<p>Angular supplies us with some default pipes for easy data formatting or manipulation.</p>
+<p>Some of these pipes are influenced by the app locale. For these settings, look at app.config.ts and main.ts</p>
+<p>Date formatting example: {{ '2024-12-31'| date }} </p>
+<p>Currency formatting example: {{ 1000.123 | currency }}</p>
+<p>Decimal formatting example: {{ 100.123556 | number }}</p>
+<p>Percentage formatting example: {{ 0.33 | percent }} </p>
+<p>Async pipes can be used to subscribe to an observable. Click the button to update the value inside of it and see this
+    in action. <button (click)="addNumberToObservable()">{{numberSubject | async}}</button></p>
