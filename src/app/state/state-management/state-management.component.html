@@ -1,0 +1,10 @@
+<h1>State management</h1>
+<p>State management refers to how data is handled, and how it is passed accross components.</p>
+<p>Below you will see some examples of different techniques of how to handle the state.</p>
+<ul style="width: 1080px; margin:10 auto 0 auto; padding: 0;">
+    @for(route of routes; track route ){
+    <li style="display: inline" [routerLinkActive]="'active'"><a [routerLink]="route">{{route}}</a></li>
+    }
+</ul>
+
+<div style="width: 1080px; margin:0 auto;"><router-outlet style="width: 1080px;" /></div>

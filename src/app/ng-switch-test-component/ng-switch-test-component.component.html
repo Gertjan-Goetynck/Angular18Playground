@@ -1,0 +1,22 @@
+<h1>ngSwitch test</h1>
+<i><a href="https://angular.dev/api/common/NgSwitch?tab=usage-notes">Source</a></i>
+<div>
+    <label>Type red, blue or green: </label>
+    <input type="text" [(ngModel)]="color" />
+    @if(color){
+    @switch (color.toLowerCase()) {
+    @case ("red") {
+    <div>Red</div>
+    }
+    @case ("blue") {
+    <div>Blue</div>
+    }
+    @case ("green") {
+    <div>green</div>
+    }
+    @default{
+    <div>{{color}} is not known</div>
+    }
+    }
+    }
+</div>
