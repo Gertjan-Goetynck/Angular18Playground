@@ -9,6 +9,6 @@ import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
   styleUrl: './state-management.component.css'
 })
 export class StateManagementComponent {
-  readonly routes: string[] = ['inputOutput', 'inputSignalOutput', 'model']
+  readonly routes: string[] = ['inputOutput', 'inputSignalOutput', 'model', 'serviceStateManagement']
 
 }

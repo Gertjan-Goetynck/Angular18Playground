@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class InjectableService {
 
-  constructor() { }
+  private constructor() { }
 
   getInjectedText(): string {
     return "The injectable decorator can be used to make services injectable.<br/> This text is an example of it in action.<br/> Check the source code to see how this is done.";

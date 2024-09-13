@@ -11,10 +11,17 @@ import { StateManagementComponent } from './state/state-management/state-managem
 import { ParentComponent as InputOutputParent } from './state/inputOutput/parent/parent.component';
 import { ParentComponent as InputSignalOutputParent } from './state/signalOutput/parent/parent.component';
 import { ParentComponent as ModelParent } from './state/model/parent/parent.component';
+import { ParentComponent as ServiceStateManagement } from './state/serviceSideState/parent/parent.component';
+import { MainComponent } from './rxjs/main/main.component';
+import { PrimerComponent } from './rxjs/primer/primer.component';
+import { OperatorsComponent } from './rxjs/operators/operators.component';
+import { CombinationComponent } from './rxjs/combination/combination.component';
+import { FilteringComponent } from './rxjs/filtering/filtering.component';
+import { TransformationComponent } from './rxjs/tranformation/tranformation.component';
 
 
 export const routes: Routes = [
-    { path: '', title: 'landing', component: StandaloneTestComponent },
+    { path: '', title: 'landing', component: HtmlTemplateExamplesComponent },
     { path: 'standaloneComponent', title: 'standAloneComponentTest', component: StandaloneTestComponent },
     {
         path: 'htmlTemplate', title: 'htmlTemplate', component: HtmlTemplateExamplesComponent, children: [{ path: 'ifElse', title: 'ifElseComponentTest', component: IfElseTestComponent },
@@ -30,7 +37,20 @@ export const routes: Routes = [
         path: 'stateManagement', title: 'stateManagement', component: StateManagementComponent, children: [
             { path: 'inputOutput', title: 'inputOutput', component: InputOutputParent },
             { path: 'inputSignalOutput', title: 'inputSignalOutput', component: InputSignalOutputParent },
-            { path: 'model', title: 'model', component: ModelParent }
+            { path: 'model', title: 'model', component: ModelParent },
+            { path: 'serviceStateManagement', title: 'serviceStateManagement', component: ServiceStateManagement }
+        ]
+    },
+    {
+        path: 'rxjs', title: 'rxjs', component: MainComponent, children: [
+            { path: 'primer', title: 'primer', component: PrimerComponent },
+            {
+                path: 'operators', title: 'operators', component: OperatorsComponent, children: [
+                    { path: 'combination', title: 'combination', component: CombinationComponent },
+                    { path: 'filtering', title: 'filtering', component: FilteringComponent },
+                    { path: 'transformation', title: 'transformation', component: TransformationComponent },
+                ]
+            },
         ]
     },
     { path: '**', redirectTo: '' }

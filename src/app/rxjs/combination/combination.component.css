@@ -1,0 +1,7 @@
+li:not(:first-child) {
+    margin-left: 20px;
+}
+
+.active {
+    font-weight: bold;
+}

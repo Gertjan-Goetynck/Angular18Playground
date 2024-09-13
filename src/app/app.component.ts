@@ -14,5 +14,5 @@ import { IfElseTestComponent } from './if-else-test/if-else-test.component';
 
 export class AppComponent {
   title = 'playgroundProject';
-  readonly routes: string[] = ['htmlTemplate', 'standaloneComponent', 'injectableService', 'stateManagement']
+  readonly routes: string[] = ['htmlTemplate', 'standaloneComponent', 'injectableService', 'stateManagement', 'rxjs']
 }
